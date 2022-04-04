@@ -1,8 +1,9 @@
 import React from 'react';
+import axios from 'axios';
 
 const Scores = () => {
   const clickHandler = async () => {
-    const scores = await fetch('/api/scores');
+    const scores = await axios.get('/api/scores');
     console.log(scores);
   };
 
