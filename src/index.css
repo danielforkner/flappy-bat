@@ -30,8 +30,3 @@ body {
   height: 100vh;
   border: 1px solid black;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
