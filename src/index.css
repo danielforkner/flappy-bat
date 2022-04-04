@@ -17,6 +17,12 @@ body {
   padding: 0;
 }
 
+.cell {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+}
+
 .titleBtns {
   display: flex;
   justify-content: space-around;

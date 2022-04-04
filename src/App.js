@@ -6,8 +6,10 @@ import Title from './components/Title';
 function App() {
   return (
     <div className="App">
-      <Title />
-      <Game />
+      <div className="main">
+        <Title />
+        <Game />
+      </div>
       <Scores />
     </div>
   );
