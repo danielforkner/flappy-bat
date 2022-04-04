@@ -8,7 +8,7 @@ const Game = () => {
 
   function handleKeyPress(event) {
     if (event.key === " ") {
-      batPosition.row++;
+      setBatPosition({ row: batPosition.row + 1, col: 5 });
     }
   }
 
@@ -24,7 +24,7 @@ const Game = () => {
   return (
     <div className="gameArea">
       <div>{score}</div>
-      <Board />
+      <Board batPosition={batPosition} />
       <img src={bat} alt="sprite" />
     </div>
   );
