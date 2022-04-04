@@ -19,7 +19,22 @@ async function addScore({ player, score }) {
   }
 }
 
+async function getScores() {
+  console.log('trying to get scores line 23 index.js db');
+  try {
+    const { rows } = await client.query(`
+        SELECT *
+        FROM scores
+        RETURNING *;
+        `);
+    return rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
 module.exports = {
   client,
   addScore,
+  getScores,
 };
