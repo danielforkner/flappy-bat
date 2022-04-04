@@ -20,12 +20,11 @@ async function addScore({ player, score }) {
 }
 
 async function getScores() {
-  console.log('trying to get scores line 23 index.js db');
   try {
     const { rows } = await client.query(`
         SELECT *
         FROM scores
-        RETURNING *;
+        ORDER BY score DESC;
         `);
     return rows;
   } catch (error) {

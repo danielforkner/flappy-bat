@@ -12,6 +12,7 @@ app.use((req, res, next) => {
   console.log('<----Body Logger START---->');
   console.log(req.body);
   console.log('<----Body Logger END---->');
+  next();
 });
 
 app.use('/api', apiRouter);
