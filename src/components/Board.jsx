@@ -29,8 +29,9 @@ const Board = ({ batPosition }) => {
   useEffect(() => {
     const { row, col } = batPosition;
     console.log(cellList);
-    let testing = cellList[0];
-    console.log(testing);
+    if (cellList[0] !== undefined) {
+      console.log(cellList[row].childNodes[col]);
+    }
   }, [batPosition]);
   return (
     <table className="gameBoard">
